@@ -16,4 +16,8 @@ describe "#caesar_cipher" do
   it "shifts all letters keeping unchanged other type of characters" do
     expect(caesar_cipher('H3l10', 3)).to eql('K3o10')
   end
+
+  it "shifts all letters keeping unchanged other type of characters even if the shift goes over the ASCII alphabet" do
+    expect(caesar_cipher('H3ll0', 15)).to eql('W3aa0')
+  end
 end
