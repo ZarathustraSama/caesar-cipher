@@ -12,4 +12,8 @@ describe "#caesar_cipher" do
   it "shifts all lowercase and uppercase letters to the correct value" do
     expect(caesar_cipher('Hello', 3)).to eql('Khoor')
   end
+
+  it "shifts all letters keeping unchanged other type of characters" do
+    expect(caesar_cipher('H3l10', 3)).to eql('K3o10')
+  end
 end
